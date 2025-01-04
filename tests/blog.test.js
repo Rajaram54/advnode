@@ -4,7 +4,7 @@ let page;
 
 beforeEach(async () => {
     page = await Page.build();
-    await page.goto('localhost:3000');
+    await page.goto('http://localhost:3000');
 });
 
 afterEach(async() => {
@@ -37,7 +37,7 @@ describe('When login', async () => {
         test('clicking button for save', async () => {
             await page.click('button.green');
             await page.waitFor('.card');
-            
+
         });
        })
 
